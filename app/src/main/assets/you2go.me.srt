@@ -1,0 +1,985 @@
+﻿1
+00:00:00,030 --> 00:00:02,820
+hey everyone welcome to CS dojo my name
+嘿大家欢迎来到CS dojo我的名字
+
+2
+00:00:02,820 --> 00:00:05,370
+is Mikey and I'm your host and today
+是Mikey，我是你的主人，今天
+
+3
+00:00:05,370 --> 00:00:07,319
+we're going to talk about the top five
+我们将讨论 前五名
+
+4
+00:00:07,319 --> 00:00:09,179
+programming languages to learn for
+编程语言去 学习
+
+5
+00:00:09,179 --> 00:00:11,250
+getting a job at companies like Google
+在 谷歌等 公司找到工作
+
+6
+00:00:11,250 --> 00:00:14,610
+Facebook Microsoft etc so the obvious
+Facebook的微软 等方面的 明显
+
+7
+00:00:14,610 --> 00:00:16,590
+question here might be doesn't really
+这里的问题 可能并不是真的
+
+8
+00:00:16,590 --> 00:00:18,300
+matter which languages you learn if
+不管你学习哪种语言
+
+9
+00:00:18,300 --> 00:00:19,710
+you're trying to get a job at one of
+你想在一个 找工作
+
+10
+00:00:19,710 --> 00:00:22,529
+these companies my answer would be yes
+这些 公司我的答案是 肯定的
+
+11
+00:00:22,529 --> 00:00:25,740
+it does but not directly what I mean by
+它确实但不 直接我的意思
+
+12
+00:00:25,740 --> 00:00:27,689
+that is when you have a job interview
+也就是说当你有 一个面试
+
+13
+00:00:27,689 --> 00:00:29,220
+with one of these companies as a
+与 这些公司 为 之一
+
+14
+00:00:29,220 --> 00:00:31,410
+software engineer candidate the most
+软件工程师候选人最多
+
+15
+00:00:31,410 --> 00:00:33,360
+important thing they'll usually look for
+他们通常会 寻找重要的事情
+
+16
+00:00:33,360 --> 00:00:35,610
+is not what specific language or
+不是 什么特定的语言或
+
+17
+00:00:35,610 --> 00:00:37,920
+technology you've been using instead
+你一直在使用的技术
+
+18
+00:00:37,920 --> 00:00:40,410
+they tend to look for mostly your coding
+他们倾向于主要寻找你的编码
+
+19
+00:00:40,410 --> 00:00:42,930
+skills your problem-solving ability and
+技能你 的解决问题的 能力和
+
+20
+00:00:42,930 --> 00:00:44,850
+your data structures and algorithms
+你的数据结构和算法
+
+21
+00:00:44,850 --> 00:00:48,809
+knowledge so you might say wait why k so
+所以你可能会说等待为什么 K 如此
+
+22
+00:00:48,809 --> 00:00:50,700
+it doesn't really matter which languages
+哪种语言并不重要
+
+23
+00:00:50,700 --> 00:00:53,129
+I learned them my answer to that would
+我学会了他们我的答案，那会
+
+24
+00:00:53,129 --> 00:00:56,399
+be actually it still matters a lot I'm
+事实上，它仍然很 重要， 我是
+
+25
+00:00:56,399 --> 00:00:58,199
+going to explain my reasoning behind
+去解释我的背后的推理
+
+26
+00:00:58,199 --> 00:01:00,629
+that in this video but if you just want
+在这个视频中，但如果 你只是想
+
+27
+00:01:00,629 --> 00:01:02,730
+to find my lists just keep over to this
+找到我的名单 只是继续 这一点
+
+28
+00:01:02,730 --> 00:01:05,460
+time in this video okay so if these
+时间在这个视频好吧，如果这些
+
+29
+00:01:05,460 --> 00:01:07,350
+large companies don't care that much
+大公司并不在乎
+
+30
+00:01:07,350 --> 00:01:09,720
+about which languages you know then why
+你知道哪些语言为什么
+
+31
+00:01:09,720 --> 00:01:11,610
+does it matter at all which languages
+这 对 所有的语言来说都很重要吗？
+
+32
+00:01:11,610 --> 00:01:13,439
+you learn if you want to get a job at
+你知道你是否想找工作
+
+33
+00:01:13,439 --> 00:01:15,420
+one of these companies there are three
+这些 企业 的 一个 有三个
+
+34
+00:01:15,420 --> 00:01:18,479
+reasons for this reason number one when
+第一个原因是什么时候
+
+35
+00:01:18,479 --> 00:01:20,250
+you apply for a job at one of these big
+你 在 这些大公司 申请 工作
+
+36
+00:01:20,250 --> 00:01:21,960
+companies how do you think they will
+公司你觉得他们 会 如何
+
+37
+00:01:21,960 --> 00:01:23,729
+decide if they should invite you for a
+决定他们是否应该邀请你 参加
+
+38
+00:01:23,729 --> 00:01:25,979
+job interview of course there are a few
+当然面试的人有几个
+
+39
+00:01:25,979 --> 00:01:28,049
+different aspects to this for example
+不同的方面，例如
+
+40
+00:01:28,049 --> 00:01:30,180
+your education your personal projects
+你的教育你的个人项目
+
+41
+00:01:30,180 --> 00:01:32,549
+and so on but the biggest factor is
+等等， 但 最大的因素 是
+
+42
+00:01:32,549 --> 00:01:35,549
+usually your work experience and how do
+通常你的工作经验和做法
+
+43
+00:01:35,549 --> 00:01:37,020
+you get the experience in the first
+你 在第一次 获得经验
+
+44
+00:01:37,020 --> 00:01:39,540
+place probably at smaller less known
+可能位于较小的已知位置
+
+45
+00:01:39,540 --> 00:01:42,000
+companies first and actually smaller
+公司第一，实际上更小
+
+46
+00:01:42,000 --> 00:01:44,640
+companies and startups tend to care more
+公司和初创公司往往关心更多
+
+47
+00:01:44,640 --> 00:01:46,740
+about which specific language or
+关于哪一种特定的语言或
+
+48
+00:01:46,740 --> 00:01:49,500
+technology you know so for example a
+你知道的技术例如a
+
+49
+00:01:49,500 --> 00:01:52,350
+small start-up might say we need someone
+小公司可能会说我们需要一个人
+
+50
+00:01:52,350 --> 00:01:54,149
+who can help us create an iOS app
+谁可以帮助我们 创建一个iOS应用程序
+
+51
+00:01:54,149 --> 00:01:57,350
+tomorrow or we need someone who knows
+明天还是需要知道的人
+
+52
+00:01:57,350 --> 00:02:00,570
+JavaScript really well by next month so
+JavaScript的真的 很好下个月 如此
+
+53
+00:02:00,570 --> 00:02:02,369
+depending on which languages you know
+取决于你知道哪种语言
+
+54
+00:02:02,369 --> 00:02:05,009
+it'll actually be easier or harder for
+它实际上会更容易或更难
+
+55
+00:02:05,009 --> 00:02:06,659
+you to get a job at one of these smaller
+你在 这些较小的 一个找到工作
+
+56
+00:02:06,659 --> 00:02:09,420
+companies and reason number two I think
+公司和原因 排名 第二，我认为
+
+57
+00:02:09,420 --> 00:02:10,800
+you should learn a programming language
+你应该学习一门编程 语言
+
+58
+00:02:10,800 --> 00:02:12,989
+that aligns with your interests so you
+这符合你的兴趣，所以你
+
+59
+00:02:12,989 --> 00:02:13,780
+have more
+有更多的
+
+60
+00:02:13,780 --> 00:02:16,569
+duration and reason for learning so for
+持续时间 和原因 的学习 所以
+
+61
+00:02:16,569 --> 00:02:17,920
+example if you're interested in learning
+例如，如果你有 兴趣学习
+
+62
+00:02:17,920 --> 00:02:20,050
+to make an iPhone app you should
+制作iPhone 应用程序你 应该
+
+63
+00:02:20,050 --> 00:02:22,270
+probably learn Swift and if you're
+可能学习Swift，如果你是
+
+64
+00:02:22,270 --> 00:02:24,069
+interested in data science machine
+对数据科学机器感兴趣
+
+65
+00:02:24,069 --> 00:02:26,110
+learning or science in general
+一般学习或科学
+
+66
+00:02:26,110 --> 00:02:28,240
+Python might be a good choice for you
+Python 对你来说可能是一个不错的选择
+
+67
+00:02:28,240 --> 00:02:30,580
+reason number three some programming
+原因三是一些编程
+
+68
+00:02:30,580 --> 00:02:33,130
+languages or simply easier to learn than
+语言还是简单易学
+
+69
+00:02:33,130 --> 00:02:35,670
+some other ones for example I would say
+例如我会说一些其他的
+
+70
+00:02:35,670 --> 00:02:38,380
+JavaScript is easier to learn than Java
+JavaScript 比Java更容易学习
+
+71
+00:02:38,380 --> 00:02:41,709
+and Python is easier to learn than C++
+Python 比C ++ 更容易 学习
+
+72
+00:02:41,709 --> 00:02:44,980
+so based on that I decided to use the
+所以根据 我决定 使用
+
+73
+00:02:44,980 --> 00:02:47,950
+job market and ease of learning as the
+就业市场和易于 学习 作为 的
+
+74
+00:02:47,950 --> 00:02:50,410
+two main criteria for making my list of
+制定 我的清单的两个主要标准
+
+75
+00:02:50,410 --> 00:02:53,110
+top 5 programming languages to learn ok
+排名前5的编程语言学习 OK
+
+76
+00:02:53,110 --> 00:02:57,370
+so here's my list number 5 Ruby Ruby is
+所以这里是我的清单编号5 Ruby Ruby是
+
+77
+00:02:57,370 --> 00:02:59,560
+a programming language from Japan it
+来自日本的编程语言
+
+78
+00:02:59,560 --> 00:03:01,750
+became popular due to the popularity of
+因受欢迎而 流行起来
+
+79
+00:03:01,750 --> 00:03:04,420
+something called Ruby on Rails and Ruby
+Ruby on Rails和Ruby
+
+80
+00:03:04,420 --> 00:03:06,310
+on Rails was at some point I would say
+在Rails 上我会 说
+
+81
+00:03:06,310 --> 00:03:08,290
+the hardest framework for building
+最难的建筑框架
+
+82
+00:03:08,290 --> 00:03:11,019
+websites although it's not as popular as
+网站 虽然它不是那么 受欢迎
+
+83
+00:03:11,019 --> 00:03:12,040
+it used to be anymore
+它曾经是 了
+
+84
+00:03:12,040 --> 00:03:14,890
+still a lot of companies use Ruby on
+还有很多 公司使用 Ruby
+
+85
+00:03:14,890 --> 00:03:17,709
+Rails today and Ruby is a really simple
+Rails今天和Ruby是一个非常简单的
+
+86
+00:03:17,709 --> 00:03:20,440
+and easy language to learn number four
+和简单的语言学习 四号
+
+87
+00:03:20,440 --> 00:03:23,950
+swift Swift is now the primary language
+Swift Swift现在是主要语言
+
+88
+00:03:23,950 --> 00:03:26,350
+for building an iOS app whether it's for
+用于构建iOS 应用程序
+
+89
+00:03:26,350 --> 00:03:29,350
+iPhone or iPad if you have the skill it
+iPhone或iPad，如果你有本事就
+
+90
+00:03:29,350 --> 00:03:31,090
+should be fairly easy for you to get a
+应该对 你来说相当容易
+
+91
+00:03:31,090 --> 00:03:33,280
+job since many companies want to build
+因为许多公司想要建立工作
+
+92
+00:03:33,280 --> 00:03:35,709
+iOS apps I haven't used this language
+iOS应用程序我没有使用过这种语言
+
+93
+00:03:35,709 --> 00:03:38,410
+extensively myself but it seems like a
+广泛我自己，但它似乎是一个
+
+94
+00:03:38,410 --> 00:03:40,660
+fairly simple and easy language to learn
+相当 简单易学的语言
+
+95
+00:03:40,660 --> 00:03:43,720
+the only downside of Swift is that it's
+Swift 唯一的缺点 就是它
+
+96
+00:03:43,720 --> 00:03:46,480
+not really cross-platform meaning it's
+不是真正的跨平台的意思
+
+97
+00:03:46,480 --> 00:03:48,820
+not easy to create an iOS app with Swift
+使用Swift创建iOS应用程序并不容易
+
+98
+00:03:48,820 --> 00:03:51,130
+if you don't have a Mac number three
+如果你没有Mac三号
+
+99
+00:03:51,130 --> 00:03:54,310
+Java Java is probably one of the most
+Java Java可能是其中之一
+
+100
+00:03:54,310 --> 00:03:56,590
+widely used programming languages today
+当今广泛使用的编程语言
+
+101
+00:03:56,590 --> 00:03:59,290
+you can use Java to build many things
+你可以 使用Java来构建很多东西
+
+102
+00:03:59,290 --> 00:04:02,200
+including Android apps many companies
+包括许多公司的Android应用
+
+103
+00:04:02,200 --> 00:04:04,750
+use Java frameworks to create websites
+使用Java框架 来 创建网站
+
+104
+00:04:04,750 --> 00:04:07,180
+as well unfortunately it's not the
+不幸的是它不是
+
+105
+00:04:07,180 --> 00:04:09,459
+easiest language to learn since it's a
+最简单的语言学习，因为它是一个
+
+106
+00:04:09,459 --> 00:04:10,780
+bit more complex than the other
+比其他更复杂一点
+
+107
+00:04:10,780 --> 00:04:14,079
+languages in this list number two Python
+这个列表中的语言编号为两个Python
+
+108
+00:04:14,079 --> 00:04:16,209
+Python is also a very popular
+Python 也很受欢迎
+
+109
+00:04:16,209 --> 00:04:18,070
+programming language at least in North
+编程语言至少在北方
+
+110
+00:04:18,070 --> 00:04:20,470
+America and many companies use it to
+美国和许多公司使用它
+
+111
+00:04:20,470 --> 00:04:22,330
+create websites with frameworks like
+用类似框架创建网站
+
+112
+00:04:22,330 --> 00:04:25,360
+Django and flask this is probably the
+Django和烧瓶这可能是
+
+113
+00:04:25,360 --> 00:04:26,650
+language of your choice if you're
+你选择的语言
+
+114
+00:04:26,650 --> 00:04:27,400
+interested in
+有兴趣
+
+115
+00:04:27,400 --> 00:04:29,199
+things like data science machine
+像数据科学机器一样
+
+116
+00:04:29,199 --> 00:04:32,169
+learning or science in general it's also
+一般的学习或科学 也是如此
+
+117
+00:04:32,169 --> 00:04:33,970
+one of the main languages used at Google
+Google使用的主要语言之一
+
+118
+00:04:33,970 --> 00:04:36,610
+so it's popular at both large companies
+所以它在两家大公司都很受欢迎
+
+119
+00:04:36,610 --> 00:04:39,840
+and smaller companies and number one
+和较小的公司和第一名
+
+120
+00:04:39,840 --> 00:04:42,850
+javascript javascript used to be a
+JavaScript的JavaScript曾经是一个
+
+121
+00:04:42,850 --> 00:04:45,070
+language that only ran on your browser
+只在您的浏览器上运行的语言
+
+122
+00:04:45,070 --> 00:04:47,410
+whether it's Chrome Firefox or Safari
+无论是Chrome Firefox还是Safari
+
+123
+00:04:47,410 --> 00:04:50,320
+but recently people started using it to
+但最近 人们开始使用 它
+
+124
+00:04:50,320 --> 00:04:52,600
+create back-end code meaning the code
+创建代码的后端代码
+
+125
+00:04:52,600 --> 00:04:54,940
+that runs on your servers not just
+不仅仅是在你的服务器上运行
+
+126
+00:04:54,940 --> 00:04:57,220
+front-end code meaning the code that
+前端代码的含义就是代码
+
+127
+00:04:57,220 --> 00:04:59,260
+runs on your device whether it's a phone
+在 设备 上运行， 无论是手机
+
+128
+00:04:59,260 --> 00:05:02,110
+or a laptop javascript is a great
+或一台笔记本电脑的JavaScript是伟大的
+
+129
+00:05:02,110 --> 00:05:03,970
+language to learn for getting a job and
+学习获得工作 和 学习的语言
+
+130
+00:05:03,970 --> 00:05:06,190
+it's also fairly simple and easy to
+它也相当简单和容易
+
+131
+00:05:06,190 --> 00:05:08,470
+learn now if you're just getting started
+现在学习，如果你是刚刚 开始
+
+132
+00:05:08,470 --> 00:05:10,479
+with programming I'd recommend that you
+与 编程我会建议你
+
+133
+00:05:10,479 --> 00:05:12,760
+start with either Python or JavaScript
+先从 Python或JavaScript的
+
+134
+00:05:12,760 --> 00:05:15,340
+and I think your optimal choice here
+我认为 你的最佳选择在这里
+
+135
+00:05:15,340 --> 00:05:18,220
+mostly depends on your interests for
+主要取决于 你的兴趣
+
+136
+00:05:18,220 --> 00:05:20,530
+example if you're interested in UI or
+例如，如果你有 兴趣在用户界面或
+
+137
+00:05:20,530 --> 00:05:23,500
+user experience design then JavaScript
+用户体验设计，然后是JavaScript
+
+138
+00:05:23,500 --> 00:05:25,870
+is probably the way to go if you're more
+可能是如果你更要走 的路
+
+139
+00:05:25,870 --> 00:05:28,479
+into logic machine learning or science
+进入逻辑机器学习或科学
+
+140
+00:05:28,479 --> 00:05:30,520
+in general python might be the right
+一般python可能是 正确的
+
+141
+00:05:30,520 --> 00:05:33,039
+choice for you now I have three more
+你的选择我现在有三个
+
+142
+00:05:33,039 --> 00:05:35,200
+languages for honorable mentions but I
+语言为光荣的提及， 但我
+
+143
+00:05:35,200 --> 00:05:36,610
+have a quick announcement to make
+有一个快速的发布的消息，
+
+144
+00:05:36,610 --> 00:05:39,039
+I've just launched my patreon page where
+我刚刚启动了我的patreon页面
+
+145
+00:05:39,039 --> 00:05:41,410
+you can chip in a few dollars to join a
+你可以在几块钱 中加入一块
+
+146
+00:05:41,410 --> 00:05:43,330
+private Facebook group and a private
+私人Facebook组和私人
+
+147
+00:05:43,330 --> 00:05:45,669
+monthly live stream where you can ask me
+每月直播， 你可以问我
+
+148
+00:05:45,669 --> 00:05:48,310
+any questions I'd much appreciate it if
+我倒是有任何疑问感激如果
+
+149
+00:05:48,310 --> 00:05:51,789
+you can head over to CS dojo dot io / PT
+你可以前往CS dojo dot io / PT
+
+150
+00:05:51,789 --> 00:05:54,130
+to support my channel so here's my
+以支持我的频道， 所以这里是我的
+
+151
+00:05:54,130 --> 00:05:56,650
+honorable mention number one go which is
+值得一提的是哪一个
+
+152
+00:05:56,650 --> 00:05:59,979
+also known as go lang this language was
+也被称为 去郎这种语言 是
+
+153
+00:05:59,979 --> 00:06:02,169
+originally developed at Google but it's
+最初是在谷歌开发的， 但它是
+
+154
+00:06:02,169 --> 00:06:04,360
+used extensively in many companies today
+今天 在许多公司广泛使用
+
+155
+00:06:04,360 --> 00:06:07,900
+go is known for its efficiency and it's
+去以其效率 和 它的
+
+156
+00:06:07,900 --> 00:06:10,479
+simple syntax and it's actually becoming
+简单的语法，它实际上正在成为
+
+157
+00:06:10,479 --> 00:06:12,039
+one of the most popular programming
+最流行的编程 之一
+
+158
+00:06:12,039 --> 00:06:14,260
+languages today so if you're looking to
+今天的语言，所以如果你正在 寻找
+
+159
+00:06:14,260 --> 00:06:16,449
+add a language to your skill set this is
+添加 语言到你的技能，这是
+
+160
+00:06:16,449 --> 00:06:17,830
+the first language I'd definitely
+我肯定 是第一语言
+
+161
+00:06:17,830 --> 00:06:20,139
+consider honorable mention number two
+考虑第二名
+
+162
+00:06:20,139 --> 00:06:23,080
+Courtland Courtland is a relatively new
+考特兰考特兰是一个相对较 新的
+
+163
+00:06:23,080 --> 00:06:25,510
+language and it works in both a Java
+语言和它的作品在上 使用 Java
+
+164
+00:06:25,510 --> 00:06:28,330
+based environment and a JavaScript based
+基于JavaScript的环境和基于JavaScript的
+
+165
+00:06:28,330 --> 00:06:30,849
+environment Kotlin was recently
+环境Kotlin最近
+
+166
+00:06:30,849 --> 00:06:33,460
+officially supported by Android so it's
+Android正式支持， 所以它
+
+167
+00:06:33,460 --> 00:06:35,199
+possible that Colin will become the
+科林可能会成为这样的人
+
+168
+00:06:35,199 --> 00:06:37,180
+primary language for developing Android
+开发Android的主要语言
+
+169
+00:06:37,180 --> 00:06:39,010
+apps in the future honorable mention
+应用程序在未来的荣誉提及
+
+170
+00:06:39,010 --> 00:06:41,260
+number three Seco with
+第三名山高带
+
+171
+00:06:41,260 --> 00:06:44,380
+some people pronounce as SQL if you
+如果你有人发音为SQL
+
+172
+00:06:44,380 --> 00:06:46,090
+search for what programming language to
+搜索什么编程语言
+
+173
+00:06:46,090 --> 00:06:48,460
+learn you might run across on an article
+学习 你可能会碰到一篇文章
+
+174
+00:06:48,460 --> 00:06:50,800
+or two that mention sequel but if you're
+或两个提到续集，但 如果你是
+
+175
+00:06:50,800 --> 00:06:52,630
+beginner it might be confusing because
+初学者可能会困惑，因为
+
+176
+00:06:52,630 --> 00:06:54,700
+Seco is different from all the other
+山高与其他所有人不同
+
+177
+00:06:54,700 --> 00:06:56,320
+languages that we talked about in this
+我们在此讨论的语言
+
+178
+00:06:56,320 --> 00:06:56,830
+video
+视频
+
+179
+00:06:56,830 --> 00:06:59,830
+Seco or SQL is a programming language
+山高或 SQL是一种编程语言
+
+180
+00:06:59,830 --> 00:07:02,110
+that solely focused on managing
+只专注 于管理
+
+181
+00:07:02,110 --> 00:07:04,540
+databases it's usually used in
+它通常用于的数据库
+
+182
+00:07:04,540 --> 00:07:05,980
+conjunction with one of the other
+与另一个结合
+
+183
+00:07:05,980 --> 00:07:09,070
+languages so learning Seco as your first
+语言让你像第一次学习山高
+
+184
+00:07:09,070 --> 00:07:11,110
+programming language is probably not the
+编程语言可能不是
+
+185
+00:07:11,110 --> 00:07:13,990
+best idea and in my opinion it's not
+最好的办法，在我看来 这不是
+
+186
+00:07:13,990 --> 00:07:16,180
+that easy to learn Seco without having
+很容易学习山高没有
+
+187
+00:07:16,180 --> 00:07:19,090
+some real-life data to play with so I'd
+一些真实的 数据，所以我会玩
+
+188
+00:07:19,090 --> 00:07:21,450
+focus on learning other languages first
+首先重点学习其他语言
+
+189
+00:07:21,450 --> 00:07:23,980
+okay that's all I have for this video
+好的，这就是我拥有 的这部影片
+
+190
+00:07:23,980 --> 00:07:27,040
+thanks as always for watching and again
+感谢一如既往的收看和再次
+
+191
+00:07:27,040 --> 00:07:29,440
+I'd much appreciate it if you can head
+如果你能领导，我将非常感激
+
+192
+00:07:29,440 --> 00:07:31,690
+over to my patreon page right here to
+直到我的博客页面就在这里
+
+193
+00:07:31,690 --> 00:07:34,630
+support CS dojo and let me know in the
+支持CS dojo并让我知道
+
+194
+00:07:34,630 --> 00:07:36,520
+comment below if you have any requests
+如果您 有任何要求，请在下面评论
+
+195
+00:07:36,520 --> 00:07:38,050
+about what kind of videos I should make
+我 应该制作 什么样的视频
+
+196
+00:07:38,050 --> 00:07:40,090
+in the future and I'll see you in the
+将来，我会在你身边看到你
+
+197
+00:07:40,090 --> 00:07:42,480
+next video
+下一个视频
+
