@@ -1,4 +1,4 @@
-package mnilg.github.io.exoplayerex.exoplayer;
+package mnilg.github.io.exoplayerex.exoplayer.core;
 
 import android.content.Context;
 import android.os.Looper;
@@ -47,15 +47,6 @@ public class MNDefaultRenderersFactory extends DefaultRenderersFactory {
      */
     @Override
     protected void buildTextRenderers(Context context, TextOutput output, Looper outputLooper, int extensionRendererMode, ArrayList<Renderer> out) {
-        out.add(new TextRenderer(output,outputLooper,new MNSubtitleDecoderFactory(){
-            @Override
-            public void clickText(String text) {
-                clickSubtitleText(text);
-            }
-        }));
-    }
-
-    protected void clickSubtitleText(String text) {
-
+        out.add(new TextRenderer(output,outputLooper,new MNSubtitleDecoderFactory()));
     }
 }

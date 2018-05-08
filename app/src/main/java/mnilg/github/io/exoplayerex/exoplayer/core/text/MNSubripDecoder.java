@@ -1,4 +1,4 @@
-package mnilg.github.io.exoplayerex.exoplayer.text;
+package mnilg.github.io.exoplayerex.exoplayer.core.text;
 
 import android.text.Html;
 import android.text.SpannableString;
@@ -13,13 +13,14 @@ import com.google.android.exoplayer2.text.SubtitleDecoderException;
 import com.google.android.exoplayer2.util.LongArray;
 import com.google.android.exoplayer2.util.ParsableByteArray;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import mnilg.github.io.exoplayerex.exoplayer.MNClickableSpan;
+import mnilg.github.io.exoplayerex.exoplayer.core.MNClickableSpan;
 import mnilg.github.io.exoplayerex.utils.CheckUtils;
 
 /**
@@ -35,16 +36,10 @@ public class MNSubripDecoder extends SimpleSubtitleDecoder {
     private static final Pattern SUBRIP_TIMING_LINE =
             Pattern.compile("\\s*(" + SUBRIP_TIMECODE + ")\\s*-->\\s*(" + SUBRIP_TIMECODE + ")?\\s*");
     private final StringBuilder textBuilder;
-    private MNClickableSpan.SpannableClickCallback spannableClickCallback;
 
     public MNSubripDecoder() {
         super("MNSubripDecoder");
         textBuilder = new StringBuilder();
-    }
-
-    public MNSubripDecoder setSpannableClickCallback(MNClickableSpan.SpannableClickCallback spannableClickCallback) {
-        this.spannableClickCallback = spannableClickCallback;
-        return this;
     }
 
     @Override
@@ -84,21 +79,15 @@ public class MNSubripDecoder extends SimpleSubtitleDecoder {
                 continue;
             }
             // Read and parse the text.
+            textBuilder.setLength(0);
             while (!TextUtils.isEmpty(currentLine = subripData.readLine())) {
-                textBuilder.setLength(0);
-                textBuilder.append(currentLine.trim());
-                String tempStr = textBuilder.toString();
-                if(!CheckUtils.isChineseByReg(tempStr)) {
-                    //如果其中包含英文字符，就给英文字符添加点击事件
-                    SpannableString spannableString = getClickableCues(tempStr);
-                    cues.add(new Cue(spannableString));
-                }else {
-                    Spanned text = Html.fromHtml(tempStr);
-                    cues.add(new Cue(text));
+                if (textBuilder.length() > 0) {
+                    textBuilder.append("<br>");
                 }
-                Spanned text = Html.fromHtml(tempStr);
-                cues.add(new Cue(text));
+                textBuilder.append(currentLine.trim());
             }
+            Spanned text = Html.fromHtml(textBuilder.toString());
+            cues.add(new Cue(text));
             if (haveEndTimecode) {
                 cues.add(null);
             }
@@ -107,21 +96,6 @@ public class MNSubripDecoder extends SimpleSubtitleDecoder {
         cues.toArray(cuesArray);
         long[] cueTimesUsArray = cueTimesUs.toArray();
         return new MNSubripSubtitle(cuesArray, cueTimesUsArray);
-    }
-
-    private SpannableString getClickableCues(String string) {
-        SpannableString spannableString = new SpannableString(string);
-        List<String> items = Arrays.asList(string.split("\\s+"));//以空格分隔字符串
-        int start = 0, end;
-        for(String item : items) {
-            end = start + item.length();
-            if(start < end) {
-                spannableString.setSpan(new MNClickableSpan(item).setCallback(spannableClickCallback),start,end <= spannableString.length() ? end : spannableString.length()
-                        ,0);
-            }
-            start += item.length() + 1;//字符之间添加空格
-        }
-        return spannableString;
     }
 
     private static long parseTimecode(Matcher matcher, int groupOffset) {

@@ -1,4 +1,4 @@
-package mnilg.github.io.exoplayerex.exoplayer.text;
+package mnilg.github.io.exoplayerex.exoplayer.core.text;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.text.Cue;

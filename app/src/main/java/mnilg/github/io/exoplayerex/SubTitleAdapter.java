@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mnilg.github.io.exoplayerex.utils.Caption;
+import mnilg.github.io.exoplayerex.exoplayer.model.SrtSubtitle;
 
 /**
  * @author : 李罡
@@ -19,17 +19,17 @@ import mnilg.github.io.exoplayerex.utils.Caption;
  * @date : 2018/5/3 17:49
  */
 public class SubTitleAdapter extends RecyclerView.Adapter<SubTitleAdapter.SubTitleViewHolder> {
-    private List<Caption> captions;
     private OnClickListener onClickListener;
     private Context context;
+    private List<SrtSubtitle> srtSubtitleList;
 
     public SubTitleAdapter(Context context,OnClickListener onClickListener) {
         this.context = context;
         this.onClickListener = onClickListener;
     }
 
-    public void setCaptions(List<Caption> captions) {
-        this.captions = captions;
+    public void setSrtSubtitleList(List<SrtSubtitle> srtSubtitleList) {
+        this.srtSubtitleList = srtSubtitleList;
     }
 
     @NonNull
@@ -41,21 +41,23 @@ public class SubTitleAdapter extends RecyclerView.Adapter<SubTitleAdapter.SubTit
 
     @Override
     public void onBindViewHolder(@NonNull SubTitleViewHolder holder, int position) {
-        final Caption caption = captions.get(position);
-        holder.textView.setText(caption.content);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(onClickListener != null) {
-                    onClickListener.clickItem(caption);
+        final SrtSubtitle srtSubtitle = srtSubtitleList.get(position);
+        if(srtSubtitle != null && srtSubtitle.getCue() != null) {
+            holder.textView.setText(srtSubtitle.getCue().text);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(onClickListener != null) {
+                        onClickListener.clickItem(srtSubtitle);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     @Override
     public int getItemCount() {
-        return captions != null ? captions.size() : 0;
+        return srtSubtitleList != null ? srtSubtitleList.size() : 0;
     }
 
     public static class SubTitleViewHolder extends RecyclerView.ViewHolder{
@@ -68,6 +70,6 @@ public class SubTitleAdapter extends RecyclerView.Adapter<SubTitleAdapter.SubTit
     }
 
     public interface OnClickListener{
-        void clickItem(Caption caption);
+        void clickItem(SrtSubtitle srtSubtitle);
     }
 }

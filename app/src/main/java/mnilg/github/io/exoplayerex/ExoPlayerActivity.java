@@ -10,26 +10,19 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.decoder.SimpleDecoder;
-import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MergingMediaSource;
 import com.google.android.exoplayer2.source.SingleSampleMediaSource;
-import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.text.Cue;
-import com.google.android.exoplayer2.text.SubtitleDecoderFactory;
 import com.google.android.exoplayer2.text.TextOutput;
-import com.google.android.exoplayer2.text.subrip.SubripDecoder;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.AssetDataSource;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -37,15 +30,11 @@ import com.google.android.exoplayer2.util.MimeTypes;
 import com.google.android.exoplayer2.util.Util;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.TreeMap;
 
-import mnilg.github.io.exoplayerex.exoplayer.MNDefaultRenderersFactory;
-import mnilg.github.io.exoplayerex.utils.Caption;
-import mnilg.github.io.exoplayerex.utils.FormatSRT;
-import mnilg.github.io.exoplayerex.utils.TimedTextObject;
+import mnilg.github.io.exoplayerex.exoplayer.core.MNDefaultRenderersFactory;
+import mnilg.github.io.exoplayerex.exoplayer.core.helper.SubtitleHelper;
+import mnilg.github.io.exoplayerex.exoplayer.model.SrtSubtitle;
 
 /**
  * @author : 李罡
@@ -57,6 +46,7 @@ import mnilg.github.io.exoplayerex.utils.TimedTextObject;
 public class ExoPlayerActivity extends Activity {
     private PlayerView playerView;
     private RecyclerView recyclerView;
+    private List<SrtSubtitle> srtSubtitleList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,13 +54,7 @@ public class ExoPlayerActivity extends Activity {
         setContentView(R.layout.activity_exo_player);
         playerView = findViewById(R.id.player_view);
         recyclerView = findViewById(R.id.rv_subtitle);
-        MNDefaultRenderersFactory renderersFactory = new MNDefaultRenderersFactory(this) {
-            @Override
-            protected void clickSubtitleText(String text) {
-                super.clickSubtitleText(text);
-                Toast.makeText(ExoPlayerActivity.this,"点击content:" + text,Toast.LENGTH_LONG).show();
-            }
-        };
+        MNDefaultRenderersFactory renderersFactory = new MNDefaultRenderersFactory(this);
         final SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(renderersFactory,new DefaultTrackSelector());
         playerView.setPlayer(player);
         DataSource.Factory factory = new DataSource.Factory() {
@@ -113,25 +97,16 @@ public class ExoPlayerActivity extends Activity {
         MergingMediaSource mergingMediaSource = new MergingMediaSource(source,srtSource);
         player.prepare(mergingMediaSource);
         player.setPlayWhenReady(true);
-        FormatSRT srtFormat = new FormatSRT();
         try {
-            TimedTextObject textObject = srtFormat.parseFile("",getAssets().open("you2go.me.srt"));
-            TreeMap<Integer,Caption> captionTreeMap = textObject.captions;
-            Iterator<Integer> integers = captionTreeMap.keySet().iterator();
-            List<Caption> captions = new ArrayList<>();
-            while (integers.hasNext()) {
-                Caption caption = captionTreeMap.get(integers.next());
-                Log.e("TAG",caption.content);
-                captions.add(caption);
-            }
+            srtSubtitleList = SubtitleHelper.getInstance().parse(getAssets().open("you2go.me.srt"));
             SubTitleAdapter mAdapter = new SubTitleAdapter(ExoPlayerActivity.this, new SubTitleAdapter.OnClickListener() {
                 @Override
-                public void clickItem(Caption caption) {
-                    player.seekTo(caption.start.mseconds);
+                public void clickItem(SrtSubtitle srtSubtitle) {
+                    player.seekTo(srtSubtitle.getBeginTime());
                 }
             });
             recyclerView.setAdapter(mAdapter);
-            mAdapter.setCaptions(captions);
+            mAdapter.setSrtSubtitleList(srtSubtitleList);
             recyclerView.setLayoutManager(new LinearLayoutManager(ExoPlayerActivity.this,LinearLayoutManager.VERTICAL,false));
         } catch (IOException e) {
             e.printStackTrace();

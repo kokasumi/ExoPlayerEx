@@ -1,11 +1,11 @@
-package mnilg.github.io.exoplayerex.exoplayer;
+package mnilg.github.io.exoplayerex.exoplayer.core;
 
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.text.SubtitleDecoder;
 import com.google.android.exoplayer2.text.SubtitleDecoderFactory;
 import com.google.android.exoplayer2.util.MimeTypes;
 
-import mnilg.github.io.exoplayerex.exoplayer.text.MNSubripDecoder;
+import mnilg.github.io.exoplayerex.exoplayer.core.text.MNSubripDecoder;
 
 /**
  * @author : 李罡
@@ -14,7 +14,7 @@ import mnilg.github.io.exoplayerex.exoplayer.text.MNSubripDecoder;
  * @copyright(版权) : 本文件归属小鹏科技公司所有
  * @date : 2018/5/7 18:28
  */
-public abstract class MNSubtitleDecoderFactory implements SubtitleDecoderFactory,MNClickableSpan.SpannableClickCallback{
+public class MNSubtitleDecoderFactory implements SubtitleDecoderFactory{
     @Override
     public boolean supportsFormat(Format format) {
         return SubtitleDecoderFactory.DEFAULT.supportsFormat(format);
@@ -28,7 +28,7 @@ public abstract class MNSubtitleDecoderFactory implements SubtitleDecoderFactory
     @Override
     public SubtitleDecoder createDecoder(Format format) {
         if(MimeTypes.APPLICATION_SUBRIP.equals(format.sampleMimeType)) {
-            return new MNSubripDecoder().setSpannableClickCallback(this);
+            return new MNSubripDecoder();
         }
         return SubtitleDecoderFactory.DEFAULT.createDecoder(format);
     }

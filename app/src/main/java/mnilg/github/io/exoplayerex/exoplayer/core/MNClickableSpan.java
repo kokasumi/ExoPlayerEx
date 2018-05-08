@@ -1,4 +1,4 @@
-package mnilg.github.io.exoplayerex.exoplayer;
+package mnilg.github.io.exoplayerex.exoplayer.core;
 
 import android.text.style.ClickableSpan;
 import android.view.View;
