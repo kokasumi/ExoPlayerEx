@@ -1,7 +1,6 @@
 package mnilg.github.io.exoplayerex.exoplayer.core.text;
 
 import android.text.Html;
-import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.Log;
@@ -13,15 +12,9 @@ import com.google.android.exoplayer2.text.SubtitleDecoderException;
 import com.google.android.exoplayer2.util.LongArray;
 import com.google.android.exoplayer2.util.ParsableByteArray;
 
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import mnilg.github.io.exoplayerex.exoplayer.core.MNClickableSpan;
-import mnilg.github.io.exoplayerex.utils.CheckUtils;
 
 /**
  * @author : 李罡

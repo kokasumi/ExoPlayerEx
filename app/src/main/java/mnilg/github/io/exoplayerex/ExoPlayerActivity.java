@@ -35,6 +35,8 @@ import java.util.List;
 import mnilg.github.io.exoplayerex.exoplayer.core.MNDefaultRenderersFactory;
 import mnilg.github.io.exoplayerex.exoplayer.core.helper.SubtitleHelper;
 import mnilg.github.io.exoplayerex.exoplayer.model.SrtSubtitle;
+import mnilg.github.io.exoplayerex.exoplayer.ui.SubtitleClickableSpan;
+import mnilg.github.io.exoplayerex.exoplayer.ui.SubtitleView;
 
 /**
  * @author : 李罡
@@ -45,6 +47,7 @@ import mnilg.github.io.exoplayerex.exoplayer.model.SrtSubtitle;
  */
 public class ExoPlayerActivity extends Activity {
     private PlayerView playerView;
+    private SubtitleView subtitleView;
     private RecyclerView recyclerView;
     private List<SrtSubtitle> srtSubtitleList;
 
@@ -54,6 +57,7 @@ public class ExoPlayerActivity extends Activity {
         setContentView(R.layout.activity_exo_player);
         playerView = findViewById(R.id.player_view);
         recyclerView = findViewById(R.id.rv_subtitle);
+        subtitleView = findViewById(R.id.subtitle_view);
         MNDefaultRenderersFactory renderersFactory = new MNDefaultRenderersFactory(this);
         final SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(renderersFactory,new DefaultTrackSelector());
         playerView.setPlayer(player);
@@ -63,7 +67,13 @@ public class ExoPlayerActivity extends Activity {
                 return new AssetDataSource(ExoPlayerActivity.this);
             }
         };
-        playerView.setUseController(false);
+//        playerView.setUseController(false);
+        subtitleView.setClickCallback(new SubtitleClickableSpan.SpannableClickCallback() {
+            @Override
+            public void clickText(String text) {
+                Toast.makeText(ExoPlayerActivity.this,"点击字幕:" + text,Toast.LENGTH_LONG).show();
+            }
+        });
         player.addTextOutput(new TextOutput() {
             @Override
             public void onCues(List<Cue> cues) {
@@ -71,6 +81,7 @@ public class ExoPlayerActivity extends Activity {
                 for(Cue cue : cues) {
                     Log.e("TAG","position:" + cue.position + ",positionAnchor:" + cue.positionAnchor + ",text" + cue.text);
                 }
+                subtitleView.onCues(cues);
             }
         });
         player.addListener(new Player.DefaultEventListener() {
